@@ -18,11 +18,11 @@ public class ParkingLotManager {
 		//idManager =
 	}
 	//登记停车厂结点
-	public boolean Register(String id,ParkNode node)
+	public boolean Register(ParkNode node)
 	{
-		if(!parkDic.containsKey(id))
+		if(!parkDic.containsKey(node.getID()))
 		{
-			parkDic.put(id, node);
+			parkDic.put(node.getID(), node);
 			return true;
 		}
 		return false;
